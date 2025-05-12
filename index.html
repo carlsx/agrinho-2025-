@@ -1,0 +1,276 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+<title>Festajando o Campo e a Cidade - Rodeio PBR</title>
+<style>
+  /* Reset and basic styles */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  body {
+    background: linear-gradient(135deg, #663300 0%, #a0522d 100%);
+    color: #f3e5d8;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    line-height: 1.4;
+  }
+  /* Container for main content */
+  .container {
+    max-width: 350px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px 20px 30px;
+    flex: 1 0 auto;
+  }
+  header {
+    text-align: center;
+    padding: 15px 0 10px;
+    border-bottom: 2px solid #f3e5d8;
+    font-family: 'Rockwell', 'Courier New', Courier, monospace;
+  }
+  header h1 {
+    font-size: 1.6rem;
+    letter-spacing: 0.12em;
+    text-shadow: 2px 2px 4px #3b1f0b;
+    color: #ffc857;
+  }
+  header p {
+    font-size: 1rem;
+    font-style: italic;
+    color: #f3d3a0;
+    margin-top: 4px;
+  }
+  /* Hero Section */
+  .hero {
+    background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80') no-repeat center center/cover;
+    border-radius: 12px;
+    height: 200px;
+    margin: 15px 0 25px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(102, 51, 0, 0.65);
+  }
+  .hero-text {
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+    color: #ffd670;
+    font-weight: 700;
+    font-size: 1.4rem;
+    text-shadow: 2px 2px 5px #3b1f0b;
+  }
+  /* Sections */
+  section {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    margin-bottom: 20px;
+    padding: 15px 12px;
+    box-shadow: 0 0 7px #3b1f0b80;
+  }
+  section h2 {
+    font-family: 'Rockwell', monospace;
+    color: #ffde7d;
+    margin-bottom: 8px;
+    font-size: 1.3rem;
+    text-shadow: 1px 1px 2px #3b1f0b;
+  }
+  section p {
+    font-size: 0.9rem;
+    color: #fff7e6;
+    text-align: justify;
+  }
+  /* Event highlights list */
+  .event-list {
+    list-style: none;
+    padding-left: 0;
+  }
+  .event-list li {
+    margin: 8px 0;
+    padding-left: 18px;
+    position: relative;
+    font-weight: 600;
+    color: #ffd670;
+  }
+  .event-list li::before {
+    content: "🐂";
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  /* Gallery - simple horizontal scroll */
+  .gallery {
+    display: flex;
+    overflow-x: auto;
+    gap: 8px;
+    padding-bottom: 8px;
+  }
+  .gallery img {
+    border-radius: 10px;
+    width: 120px;
+    height: 80px;
+    object-fit: cover;
+    flex-shrink: 0;
+    box-shadow: 0 0 5px #3b1f0bcc;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+  }
+  .gallery img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px #ffc857;
+  }
+  /* Footer */
+  footer {
+    text-align: center;
+    font-size: 0.75rem;
+    padding: 10px 5px;
+    color: #f3d3a0aa;
+    border-top: 1px solid #f3d3a0aa;
+    user-select: none;
+  }
+  /* Scrollbar styling for gallery */
+  .gallery::-webkit-scrollbar {
+    height: 6px;
+  }
+  .gallery::-webkit-scrollbar-track {
+    background: #3b1f0b40;
+    border-radius: 3px;
+  }
+  .gallery::-webkit-scrollbar-thumb {
+    background: #ffc857aa;
+    border-radius: 3px;
+  }
+  /* Responsive & mobile adjustments */
+  @media (max-width: 350px) {
+    body {
+      font-size: 14px;
+    }
+    .hero-text {
+      font-size: 1.1rem;
+    }
+    section h2 {
+      font-size: 1.1rem;
+    }
+    .gallery img {
+      width: 90px;
+      height: 60px;
+    }
+  }
+</style>
+</head>
+<body>
+<header role="banner">
+  <h1>Festajando o Campo e a Cidade</h1>
+  <p>Rodeio PBR - Uma celebração da emoção e tradição</p>
+</header>
+<div class="container" role="main">
+  <div class="hero" aria-label="Imagem temática rodeio PBR com touro e vaqueiro">
+    <div class="hero-text">Viva a emoção do rodeio PBR!</div>
+  </div>
+  <section aria-labelledby="about-title">
+    <h2 id="about-title">Sobre o Rodeio PBR</h2>
+    <p>
+      O rodeio Professional Bull Riders (PBR) é uma experiência incrível que une a força e a coragem do campo com a energia vibrante da cidade. O esporte combina técnica, bravura e tradição, trazendo uma oportunidade única de vivenciar a cultura do rodeio, respeitando suas raízes rurais e conectando com a modernidade urbana. Aqui celebramos essa mistura de estilos e fãs apaixonados.
+    </p>
+  </section>
+  <section aria-labelledby="event-title">
+    <h2 id="event-title">Destaques do Evento</h2>
+    <ul class="event-list">
+      <li>Batalhas emocionantes entre touro e peão</li>
+      <li>Shows musicais com artistas regionais</li>
+      <li>Gastronomia típica do campo e da cidade</li>
+      <li>Exposição de cowboy gear e artesanato local</li>
+      <li>Atividades para toda a família e workshops</li>
+    </ul>
+  </section>
+  <section aria-labelledby="gallery-title">
+    <h2 id="gallery-title">Galeria PBR</h2>
+    <div class="gallery" role="list" aria-label="Galeria de imagens do rodeio PBR">
+      <img src="https://images.unsplash.com/photo-1508154048109-de555266b8d9?auto=format&fit=crop&w=300&q=80" alt="Peão montando touro bravo" role="listitem" />
+      <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=300&q=80" alt="Lançamento de laço no rodeio" role="listitem" />
+      <img src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?auto=format&fit=crop&w=300&q=80" alt="Touros no pasto antes do rodeio" role="listitem" />
+      <img src="https://images.unsplash.com/photo-1567581935889-8acb146fbcca?auto=format&fit=crop&w=300&q=80" alt="Cowboy segurando chapéu no ar" role="listitem" />
+    </div>
+  </section>
+</div>
+<footer role="contentinfo">
+  &copy; 2024 Festajando o Campo e a Cidade - Rodeio PBR | Feito com ❤️ e paixão pelo rodeio
+</footer>
+<script>
+  // Simple: clicking images in gallery enlarges them in a modal
+  (() => {
+    const gallery = document.querySelector('.gallery');
+    if (!gallery) return;
+
+    // Create modal element
+    const modal = document.createElement('div');
+    modal.style.position = 'fixed';
+    modal.style.top = '0';
+    modal.style.left = '0';
+    modal.style.width = '100vw';
+    modal.style.height = '100vh';
+    modal.style.backgroundColor = 'rgba(0,0,0,0.85)';
+    modal.style.display = 'flex';
+    modal.style.justifyContent = 'center';
+    modal.style.alignItems = 'center';
+    modal.style.opacity = '0';
+    modal.style.pointerEvents = 'none';
+    modal.style.transition = 'opacity 0.3s ease';
+    modal.style.zIndex = '9999';
+    modal.style.cursor = 'zoom-out';
+
+    const modalImg = document.createElement('img');
+    modalImg.style.maxWidth = '90vw';
+    modalImg.style.maxHeight = '90vh';
+    modalImg.style.borderRadius = '12px';
+    modalImg.style.boxShadow = '0 0 15px #ffc857';
+
+    modal.appendChild(modalImg);
+    document.body.appendChild(modal);
+
+    function openModal(src, alt) {
+      modalImg.src = src;
+      modalImg.alt = alt;
+      modal.style.opacity = '1';
+      modal.style.pointerEvents = 'auto';
+    }
+
+    function closeModal() {
+      modal.style.opacity = '0';
+      modal.style.pointerEvents = 'none';
+    }
+
+    gallery.querySelectorAll('img').forEach(img => {
+      img.addEventListener('click', () => {
+        openModal(img.src, img.alt);
+      });
+    });
+
+    modal.addEventListener('click', () => {
+      closeModal();
+    });
+
+    // Accessibility: close modal on Escape key
+    window.addEventListener('keydown', e => {
+      if (e.key === "Escape" && modal.style.pointerEvents === 'auto') {
+        closeModal();
+      }
+    });
+  })();
+</script>
+</body>
+</html>
+
+```
